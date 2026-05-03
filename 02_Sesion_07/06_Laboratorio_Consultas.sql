@@ -8,7 +8,10 @@
 
 -- A1: Ver las primeras 10 transacciones de 'FactVentas'.
 -- Éxito: 10 filas.
-
+SELECT 'DimProducto' AS Tabla, COUNT(*) AS Registros FROM DimProducto
+UNION ALL SELECT 'DimCiudad', COUNT(*) FROM DimCiudad
+UNION ALL SELECT 'DimFecha', COUNT(*) FROM DimFecha
+UNION ALL SELECT 'FactVentas', COUNT(*) FROM FactVentas;
 
 -- A2: Contar el total de registros en 'FactVentas'.
 -- Éxito: El resultado debe ser 500.
